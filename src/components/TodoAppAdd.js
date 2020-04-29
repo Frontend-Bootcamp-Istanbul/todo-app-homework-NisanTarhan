@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {connect} from "react-redux";
-import {addTodo} from "../redux/actions";
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { addTodo } from "../redux/actions";
 
-class TodoAppAdd extends Component{
-    constructor(props){
+class TodoAppAdd extends Component {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -11,7 +11,7 @@ class TodoAppAdd extends Component{
         }
     }
 
-    render(){
+    render() {
         return (
             <div>
                 <form onSubmit={(e) => {
