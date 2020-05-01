@@ -1,18 +1,26 @@
 import React from 'react';
 import TodoAppListItem from "./TodoAppListItem";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 
-const TodoAppList = ({todos}) => {
+const TodoAppList = ({ todos }) => {
     return (
-        <div>
+        <div style={styles.todoListContainer}>
             {
                 todos.map((todo) => {
-                    return <TodoAppListItem {...todo} />
+                    return <TodoAppListItem key={todo.id} {...todo} />
                 })
             }
         </div>
     );
 };
+
+const styles = {
+    todoListContainer: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+    }
+}
 
 const mapStateToProps = (state) => {
     return {

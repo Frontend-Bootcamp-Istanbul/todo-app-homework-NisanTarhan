@@ -2,9 +2,9 @@ import React from 'react';
 import TodoAppTitle from "./TodoAppTitle";
 import TodoAppAdd from "./TodoAppAdd";
 
-const TodoAppHeader = (props) => {
+const TodoAppHeader = () => {
     return (
-        <div>
+        <div style={{ textAlign: "center" }}>
             <TodoAppTitle />
             <TodoAppAdd />
         </div>
